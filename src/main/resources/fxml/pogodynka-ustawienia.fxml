@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="pl.mimuw.pogodynka.obslugazdarzen.KontrolerOknaUstawien"
+            prefHeight="400.0" prefWidth="600.0">-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.mimuw.pogodynka.obslugazdarzen.KontrolerOknaUstawien">
+    <children>
+        <ComboBox fx:id="comboBoxZrodloPogody" layoutX="23.0" layoutY="47.0" prefHeight="26.0" prefWidth="281.0" />
+        <Label layoutX="13.0" layoutY="27.0" prefHeight="16.0" prefWidth="292.0" text="Źródło pobierania informacji o pogodzie:" />
+        <Separator layoutX="25.0" layoutY="89.0" prefHeight="0.0" prefWidth="281.0" />
+        <Label layoutX="15.0" layoutY="104.0" prefHeight="16.0" prefWidth="205.0" text="Automatyczne odświeżanie co " />
+        <Separator layoutX="19.0" layoutY="160.0" prefHeight="0.0" prefWidth="281.0" />
+        <Button layoutX="230.0" layoutY="352.0" mnemonicParsing="false" onAction="#zatwierdz" text="Zatwierdź" />
+        <Button layoutX="162.0" layoutY="350.0" mnemonicParsing="false" onAction="#anulujZmiany" text="Anuluj" />
+        <ColorPicker fx:id="wybieraczKoloru" layoutX="150.0" layoutY="173.0" onAction="#pokazKolor" prefHeight="26.0" prefWidth="155.0" />
+        <Label layoutX="13.0" layoutY="176.0" prefHeight="16.0" prefWidth="128.0" text="Kolor skórki: " />
+        <Separator layoutX="20.0" layoutY="210.0" prefHeight="0.0" prefWidth="281.0" />
+        <Label layoutX="15.0" layoutY="219.0" prefHeight="16.0" prefWidth="281.0" text="Informacje o projekcie:" />
+        <ScrollPane hbarPolicy="NEVER" layoutX="25.0" layoutY="241.0" prefHeight="104.0" prefWidth="281.0" vbarPolicy="ALWAYS">
+            <content>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Wykorzystane dane: Źródła danych pogodowych: &quot;OpenWeatherMap.org&quot;, oraz &quot;LAB-EL www.meteo.waw.pl&quot;. Źródło poziomu pyłów PM2.5 i PM10: powietrze.gios.gov.pl wykorzystane fragmentami (tylko informacje dotyczace PM2.5 PM10 ze stacji 544 na ul. Marszałkowskiej 68). Wykorzystane grafiki: Icons made by http://www.freepik.com from www.flaticon.com is licensed by CC 3.0 BY. Icons made by Elegant Themes from www.flaticon.com is licensed by CC 3.0 BY. To na tyle." wrappingWidth="264.7294921875">
+               <font>
+                  <Font size="12.0" />
+               </font></Text>
+            </content>
+        </ScrollPane>
+        <Slider fx:id="sliderOdswiezania" layoutX="25.0" layoutY="124.0" max="999.9" min="30.0" prefHeight="26.0" prefWidth="274.0" value="60.0" />
+      <Label fx:id="odswiezanieWartosc" layoutX="214.0" layoutY="104.0" prefHeight="16.0" prefWidth="39.0" text="999.9" />
+      <Label layoutX="254.0" layoutY="105.0" prefHeight="16.0" prefWidth="59.0" text="sekund." />
+    </children>
+</Pane>
