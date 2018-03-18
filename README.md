@@ -1,4 +1,5 @@
 # Pogodynka
+Window application fetching actual weather data.
 Aplikacja okienkowa pobierająca aktualne dane pogodowe.
 
 This project is using maven, and jdk1.8.
